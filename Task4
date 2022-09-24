@@ -1,0 +1,28 @@
+class Polygon:
+    def __init__(self, no_of_sides):
+        self.n = no_of_sides
+        self.sides = [0 for i in range(no_of_sides)]
+
+    def input_Sides(self):
+        self.sides = [float(input("Enter side " + str(i + 1) + " : ")) for i in range(self.n)]
+
+    def find_Perimetr_of_Triangle(self):
+        per = (self.sides[0] + self.sides[1] + self.sides[2])
+
+        print('The perimetr of the triangle is', per)
+
+    def find_Area_of_Triangle(self):
+        s = (self.sides[0] + self.sides[1] + self.sides[2]) / 2
+        area = (s * (s - self.sides[0]) * (s - self.sides[1]) * (s - self.sides[2])) ** 0.5
+        print('The area of the triangle is', area)
+
+
+class Triangle(Polygon):
+    def __init__(self):
+        Polygon.__init__(self, 3)
+
+
+t = Triangle()
+t.input_Sides()
+t.find_Area_of_Triangle()
+t.find_Perimetr_of_Triangle()
