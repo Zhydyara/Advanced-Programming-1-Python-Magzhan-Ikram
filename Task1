@@ -1,0 +1,29 @@
+#create
+import os
+"""
+directory = "TaskOnWorkingWithFile"
+parent_dir = "C:\\Users\\ZHYD\\PycharmProjects\\pythonProject"
+path = os.path.join(parent_dir, directory)
+os.mkdir(path)
+print("Directory '% s' created" % directory) 
+"""
+#update
+"""""
+path = "C:\\Users\\ZHYD\\PycharmProjects\\pythonProject\\TaskOnWorkingWithFile"
+os.rename("TaskOnWorkingWithFile","Task1")
+print("succesfully renamed")
+"""""
+#dirlist
+"""""
+path = "C:\\Users\\ZHYD\\PycharmProjects\\pythonProject\\Task1"
+dir_list = os.listdir(path)
+
+print("Files and directories in '", path, "' :",dir_list)
+"""""
+#delete
+""""
+path ="C:\\Users\\ZHYD\\PycharmProjects\\pythonProject\\Task1"
+
+os.rmdir(path)
+print("Directory '",path,"' deleted")
+"""
